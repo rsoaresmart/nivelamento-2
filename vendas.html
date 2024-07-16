@@ -31,6 +31,13 @@
     </nav>
     <h1>Vendas</h1>
 
+    <form>
+        <input type="text" placeholder="nome do produto">
+        <input type="text" placeholder="00">
+        <input type="text" placeholder="preço">
+        <button>Inserir</button>
+    </form>
+
     <div>
         <table>
             <thead>
@@ -64,5 +71,25 @@
             </tbody>
         </table>
     </div>
+
+    <style>
+        form{
+            margin-bottom: 20px;
+        }
+        input, button{
+            padding: 10px;
+            border: none; /** tirar as bordas */
+            outline: none; /** tirar as bordas quando e clicado*/
+            border-radius: 7px;
+            background-color: bisque;
+        }
+        button{
+            cursor: pointer;
+            width: 100px; /** largura */
+            color: white; /** cor da fonte */
+            font-size: 15px;
+            background-color: blueviolet;
+        }
+    </style>
 </body>
 </html>
