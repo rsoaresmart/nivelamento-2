@@ -1,0 +1,22 @@
+nav{
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: blueviolet; 
+}
+ul{
+    display: flex;
+    gap: 20px;
+
+    cursor: pointer;
+    font-size: 20px;
+}
+li{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    transition: .7s;
+}
+li:hover{
+    font-size: 25px;
+}

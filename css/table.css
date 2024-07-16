@@ -1,0 +1,18 @@
+
+table{
+    color: white;
+}
+table thead tr th{
+    padding: 10px;
+    background-color: green;
+}
+table tbody tr td{
+    text-align: center;
+    padding: 10px;
+    background-color: blue;
+}
+
+table tbody tr td:hover{
+    cursor: pointer;
+    background-color: blueviolet;
+}
