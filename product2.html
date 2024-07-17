@@ -9,6 +9,48 @@
 
     <h1>product2</h1>
     
-    <form action=""></form>
+    <form><input type="text" placeholder="nome do produto">
+          <input type="text" placeholder="00">
+          <input type="text" placeholder="preco">
+          <button>Inserir</button>
+    </form>
+
+<style>
+    /**
+    * tipo de seletorers
+    *** elemento tag h1,h2,body, imput, form, buton
+    *** classe, button, btn, inputtext
+    *** id #button #entra #cadastra #nome # email.
+    */
+body{
+    display: flex;/** inicia a propriedade flex-box */
+    align-items: center; /** alinhamento do centro */
+    flex-direction: column; /** tipo de alinhamento */
+}
+h1{
+    display: flex; /** inicializa as propriedades flex-box */
+    align-items: center; /** alinhamento do centro */
+    flex-direction: column; /** tipo de alinhamento */
+
+}
+form{
+    margin-bottom: 20px; /** eswpaçamento externo parte de baixo */
+}
+input, button{
+    padding: 10px; /** espaçamento interno */
+    border: none; /** tirar bordas */
+    outline: none; /** tirar bordas quando clicar */
+    border-radius: 7px; /** arredondamento das bordaS */
+    background-color: blueviolet; /** cor do fundo do elemento */
+}
+button{
+    cursor: pointer; /** aparece a maozinha */
+    width: 100px; /** largura */
+    color: white; /** Cor da fonte */
+    font-size: 15px; /** tamanho da fonte do texto */
+    background-color: blueviolet; /** cor do fundo do elemento */
+}
+ </style>
+
 </body>
 </html>
