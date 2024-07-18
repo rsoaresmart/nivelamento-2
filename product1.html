@@ -8,13 +8,35 @@
 <body>
     
     <h1>Produto 1</h1>
+
     <form>
         <input type="text" placeholder="nome do produto">
+        <input type="text" placeholder="00">
+        <input type="text" placeholder="preco">
+        <button>Inserir</button>
     </form>
 
     <style>
+        /**
+        * tipo de seletores
+        *** elementios tag h1, h2,body, input form, button
+        *** classes ,button, btn, inputtext
+        *** id #button. #entra, #cadastrar, #nome, #email.
+        */
+        body{
+            display: flex; /** inicializa as propiedades fex-box */
+            align-items: center; /** alinhamento ao centro */
+            flex-direction: column; /** tipo de alinhamento */
+
+        }
+        h1{
+            font-size: 40px; /** tamanho da fontye */
+            font-weight: 900; /** espesura da fonte */
+            color: blueviolet; /** cor da fonte do texto */
+        
+        }
         form{
-            margin-bottom: 20px;
+            margin-bottom: 20px; /** espaçamento externo parte de baixo */
         }
         input, button{
             padding: 10px;
@@ -22,6 +44,13 @@
             outline: none; /** tirar as bordas quando clicar */
             border-radius: 7px; 
             background-color: bisque;/** cor do fundo do botao */
+        }
+        button{
+            cursor: pointer; /** aparecer a maozinha */
+            width: 100px; /** largura */
+            color: white; /** cor da fonte */
+            font-size: 15px; /** tamanho da fonte do texto */
+            background-color: blueviolet; /** cor do fundo do elemento */
         }
     </style>
 </body>

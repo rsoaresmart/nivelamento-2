@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+</head>
+<body>
+    
+    <h1>Produto</h1>
+
+    <form>
+        <input id="inputNome"       class="inputText" type="text" placeholder="nome do produto">
+        <input id="inputQuantidade" class="inputText" type="text" placeholder="00">
+        <input id="inputPreco"      class="inputText" type="text" placeholder="preço">
+
+        <button id="btn__produto">Inserir</button>
+    </form>
+
+    <script>
+
+        /** 1. pega os valores do inputs */ 
+        function validarProduto(){
+
+            /** recebendo os valores dos inputs */
+            var nome  = document.querySelector("#inputNome").value
+            var qtd   = document.querySelector("#inputQuantidade").value
+            var preco = document.querySelector("#inputPreco").value
+
+            /** validar se as campos estão preenchidas */
+            if( !nome || !qtd || !preco ){
+                alert("Preencher todos os campos")
+                return false;
+            }else{
+                /** mostrar os valores em tela */
+                alert(
+                    "Valores: "   + nome + " " +
+                    "quantidade: " + qtd  + " " + 
+                    "preço: R$ "     + preco
+                )
+                /** para limpar os campos */
+                limpaProduto()
+            }
+        }
+
+        /** 2. chama a função pelo id do botão */
+        document.querySelector("#btn__produto")
+        .addEventListener( "click", (e) => {
+            e.preventDefault()
+            validarProduto()
+        })
+
+        /** 3. limpa os inputs */
+        function limpaProduto(){
+            var nome  = document.querySelector("#inputNome").value = ""
+            var qtd   = document.querySelector("#inputQuantidade").value = ""
+            var preco = document.querySelector("#inputPreco").value = ""
+        }
+
+    </script>
+
+    <style>
+        /**
+        * Tipos de Seletores
+        *** Elementos Tag h1, h2, body, input, form, button
+        *** Classes .button, .btn, .inputText
+        *** ID #button, #entrar, #cadastrar, #nome, #email.
+        */
+        body{ /** body corpo do documento */
+            display: flex; /** inicializa as propriedades flex-box */
+            align-items: center; /** alinhamento ao centro*/
+            flex-direction: column; /** tipo de alinhamento */
+        }
+        h1{ /** nivel de titulo h1 até o h6 */
+            font-size: 40px; /** tamanho da fonte */
+            font-weight: 900; /** espesura da fonte */
+            color: blueviolet; /** cor da fonte do texto */
+        }
+        form{ /** corpo de formulario */
+            margin-bottom: 20px; /** espaçamento externo parte de baixo */
+        }
+        input{ /** campo usado para digitar um texto */
+            padding: 10px;
+        }
+        .inputText{ /** classe usada para fazer estilizações */
+
+        }
+        input, button{
+            padding: 10px; /** espaçamento interno */
+            border: none; /** tirar as bordas */
+            outline: none; /** tirar as bordas quando e clicado*/
+            border-radius: 7px; /** arredondamento das bordas */
+            background-color: bisque; /** cor de fundo do elemento */
+        }
+        button{
+            cursor: pointer; /** aparecer a mãozinha */
+            width: 100px; /** largura */
+            color: white; /** cor da fonte */
+            font-size: 15px; /** tamanho da fonte do texto */
+            background-color: blueviolet; /** cor de fundo do elemento */
+        }
+    </style>
+
+</body>
+</html>

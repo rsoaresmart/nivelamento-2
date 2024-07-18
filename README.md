@@ -9,6 +9,5 @@ git add .
 * adicionando um comentário para seu commit
 git commit -m comentário
 
-
 * publicando o projeto
 git push

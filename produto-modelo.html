@@ -3,18 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produto</title>
+    <title>Buscar</title>
 </head>
 <body>
     
-    <h1>Produto</h1>
+    <h1>Buscar</h1>
+
 
     <form>
-        <input type="text" placeholder="nome do produto">
-        <input type="text" placeholder="00">
-        <input type="text" placeholder="preço">
-        <button>Inserir</button>
+        <input type="text" id="input__Buscar" placeholder="buscar"> 
+        <button id="btn__buscar">Buscar</button>
     </form>
+
+    <script>
+        /** 1. inicia  o validar o buscar */
+        function validarBuscar(){
+            
+            var buscar = document.querySelector("#input__Buscar")
+
+            if( !buscar.value ){
+                alert("Por favor preencher o campo")
+                return false
+            }else{
+                alert( "Digitado: " + buscar.value )   
+            }
+
+            limpaBuscar()
+        }
+
+        /** 2. chama a função */
+        document.querySelector("#btn__buscar")
+            .addEventListener("click", (e) => {
+            e.preventDefault()
+            validarBuscar()
+        })
+
+        /** 3. Limpar o campo buscar */ 
+        function limpaBuscar(){
+            var buscar = document.querySelector("#input__Buscar").value = ""
+        }
+        /** terminar o buscar */
+    </script>
 
     <style>
         /**
@@ -23,18 +52,24 @@
         *** Classes .button, .btn, .inputText
         *** ID #button, #entrar, #cadastrar, #nome, #email.
         */
-        body{
+        body{ /** body corpo do documento */
             display: flex; /** inicializa as propriedades flex-box */
             align-items: center; /** alinhamento ao centro*/
             flex-direction: column; /** tipo de alinhamento */
         }
-        h1{
+        h1{ /** nivel de titulo h1 até o h6 */
             font-size: 40px; /** tamanho da fonte */
             font-weight: 900; /** espesura da fonte */
             color: blueviolet; /** cor da fonte do texto */
         }
-        form{
+        form{ /** corpo de formulario */
             margin-bottom: 20px; /** espaçamento externo parte de baixo */
+        }
+        input{ /** campo usado para digitar um texto */
+            padding: 10px;
+        }
+        .inputText{ /** classe usada para fazer estilizações */
+
         }
         input, button{
             padding: 10px; /** espaçamento interno */
