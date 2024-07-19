@@ -7,18 +7,23 @@
     </head>
     <body>
         
-        <h1>produto</h1>
+        <h1>Preencha todos os campos abaixo</h1>
 
         <form>
             <input id="inputNome"        class="inputText" type="text" placeholder="nome do produto">
             <input id="inputQuantidade"  class="inputText" type="text" placeholder="00">
             <input id="inputPreco"       class="inputText" type="text" placeholder="preço">
+            <input id="desconto"         class="inputText" type="text" placeholder="desconto">
 
             <button id="btn__produto">Inserir</button>
         </form>
 
+        <h1> Digite seus dados e senha</h1>
+
         <form>
-                <input type="text" id="input__Buscar" placeholder="buscar">
+                <input type="text" id="input__usuario" placeholder="usuario">
+                <input type="text" id="input__cpf" placeholder="cpf">
+                <input type="text" id="input__password" placeholder="password">
                 <button id="btn__buscar">buscar</button>
             </form>
 
@@ -30,6 +35,7 @@
                     var nome   =document.querySelector("#inputnome").value 
                     var qtd    =document.querySelector("#inputquantidade").value 
                     var preco  =document.querySelector("#inputpreco").value 
+                    var desconto=document.querySelector("#inputdesconto").value 
 
                     /** validar se os campos estao preenchidos */
                     if( !nome || !qtd || !preco ){
@@ -40,7 +46,8 @@
                         alert(
                         "valores: " + nome + " " +
                         "quantidade: " + qtd +" " +
-                        "preço: R§ "     + preco 
+                        "preço: R§ "     + preco  +
+                        "desconto: 10% " + desconto
                     )
                     /** para limpar os campos */
                     limparproduto()
@@ -57,6 +64,7 @@
                     var nome = document.querySelector("#inputnome").value =""
                     var qtd  = document.querySelector("inputquantidade").value =""
                     var preco= document.querySelector("#inputpreco").value = ""
+                    var desconto= document.querySelector("#inutdesconto").value =""
 
                 }
                 /** termina produto */
@@ -103,7 +111,7 @@
                 h1{           /** nivel de titulo de h1 ate h6 */
                     font-size: 40px;       /** tamanho da fonte */
                     font-weight: 900;      /** espaçamento da fonte */
-                    color: blueviolet;   /** cor da fonte do texto */
+                    color: green;   /** cor da fonte do texto */
                 }
                 form{       /** corpo do formulario */
                     margin-bottom: 20px; /** espaçamento externo parte de baixo */
@@ -115,18 +123,19 @@
 
                 }
                 input,button{
+                    cursor: w-resize; /** adicionei maozinha */ 
                     padding: 10px;   /** espaçamento interno */
                     border: none;    /** tirar as bordas */
                     outline: none;   /** tirar as bordas quando é clicado */
                     border: 7px;     /** arrredondamentos das bordas */
-                    background-color: bisque; /** cor do fubndo do elemento */
+                    background-color: yellow; /** cor do fubndo do elemento */
                 }
                 button{
                     cursor: pointer;    /** aparecer a maozinha */
                     width: 100px;       /** largura */
-                    color: white;     /** cor da fonte */
+                    color: black;     /** cor da fonte */
                     font-size: 15px;    /** tamanho da fonte dpo texto */
-                    background-color: blueviolet; /** cor do fundo do elemento */
+                    background-color: green ; /** cor do fundo do elemento */
                 }
         </style>
 </body>
