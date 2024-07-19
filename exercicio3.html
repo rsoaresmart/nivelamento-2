@@ -1,0 +1,133 @@
+<!DOCTYPE html >
+<html lang="pt.pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>produto</title>
+    </head>
+    <body>
+        
+        <h1>produto</h1>
+
+        <form>
+            <input id="inputNome"        class="inputText" type="text" placeholder="nome do produto">
+            <input id="inputQuantidade"  class="inputText" type="text" placeholder="00">
+            <input id="inputPreco"       class="inputText" type="text" placeholder="preço">
+
+            <button id="btn__produto">Inserir</button>
+        </form>
+
+        <form>
+                <input type="text" id="input__Buscar" placeholder="buscar">
+                <button id="btn__buscar">buscar</button>
+            </form>
+
+            <script>
+                /** inicia o produto */
+                function validarProduto(){
+
+                    /** recebendo os valores dos inputs */
+                    var nome   =document.querySelector("#inputnome").value 
+                    var qtd    =document.querySelector("#inputquantidade").value 
+                    var preco  =document.querySelector("#inputpreco").value 
+
+                    /** validar se os campos estao preenchidos */
+                    if( !nome || !qtd || !preco ){
+                        alert("prencher todos os canmpos")
+                        return false
+                    }else{
+                        /** mostrar os valores em tela */
+                        alert(
+                        "valores: " + nome + " " +
+                        "quantidade: " + qtd +" " +
+                        "preço: R§ "     + preco 
+                    )
+                    /** para limpar os campos */
+                    limparproduto()
+                    }
+                }
+
+                document.querySelector("#btn__produto")
+                .addEventListener("clik", (e) => {
+                    e.preventDefault()
+                    validarProduto()
+                })
+
+                function limpaProduto(){
+                    var nome = document.querySelector("#inputnome").value =""
+                    var qtd  = document.querySelector("inputquantidade").value =""
+                    var preco= document.querySelector("#inputpreco").value = ""
+
+                }
+                /** termina produto */
+
+                /** inicia o buscar */
+                function validarBuscar(){
+
+                    var buscar = document.querySelector("#input__buscar")
+
+                if( !buscar.value ){
+                    alert("por favor preencher campo")
+                    return false
+                }else{
+                    alert( "digitando: " + buscar.value )
+                }
+
+                limparbuscar()
+                }
+
+                document.querySelector("#btn__buscar")
+                .addEventListener("clik", (e) => {
+                e.preventDefault()
+                validarBuscar()
+                })
+
+                function limparbuscar(){
+                    var buscar = document.querySelector("#input__buscar").value =""
+                }
+                /* termina o buscar */
+            </script>
+
+            <style>
+                /**
+                * tipos de seletores
+                ** elementos tag h1, h2, body, input, form, button
+                ** classes . button, .btn, .inputtext
+                ** id #button, #entra, #cadastrar, #nome, #email.
+                */
+                body{         /** body é o corpo do documento */
+                    display: flex;             /** inicializa as propriedades flex box */
+                    align-items: center;       /** alinhamento ao centro */
+                    flex-direction: column;    /** tipo de alinhamentpo */
+                }
+                h1{           /** nivel de titulo de h1 ate h6 */
+                    font-size: 40px;       /** tamanho da fonte */
+                    font-weight: 900;      /** espaçamento da fonte */
+                    color: blueviolet;   /** cor da fonte do texto */
+                }
+                form{       /** corpo do formulario */
+                    margin-bottom: 20px; /** espaçamento externo parte de baixo */
+                }
+                input{      /** campo usado para digitar um texto*/
+                    padding: 10px;
+                }
+                .inputtext{  /** classe usada para fazer estilizaçao */
+
+                }
+                input,button{
+                    padding: 10px;   /** espaçamento interno */
+                    border: none;    /** tirar as bordas */
+                    outline: none;   /** tirar as bordas quando é clicado */
+                    border: 7px;     /** arrredondamentos das bordas */
+                    background-color: bisque; /** cor do fubndo do elemento */
+                }
+                button{
+                    cursor: pointer;    /** aparecer a maozinha */
+                    width: 100px;       /** largura */
+                    color: white;     /** cor da fonte */
+                    font-size: 15px;    /** tamanho da fonte dpo texto */
+                    background-color: blueviolet; /** cor do fundo do elemento */
+                }
+        </style>
+</body>
+</html>
