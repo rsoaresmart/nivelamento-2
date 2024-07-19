@@ -29,11 +29,63 @@
             }
 
             limparbuscar()
-
         }
 
-        
-    </script>
-    
+        /** 2. chamar a funçao */
+        document.querySelector("#btn__buscar")
+        .addEventListener("clik", (e) =>{
+            e.preventDefault()
+            validarBuscar()
+        })
+
+        /** 3.limpar o campo buscar */
+        function limpaBuscar(){
+            var buscar = document.querySelector("#input__buscar").value =""
+        }
+        /** terminar o buscar */
+        </script>
+
+        <style>
+            /** 
+            *     tipos de seletores
+            ***   elementos tag h1, h2, body, input, form, buttun
+            ***   classes, button, btn, inputtex
+            ***   id #button, #inter, #cadastrar, #nome, #email.
+            */
+            body{ /** body corpo do documento */
+            display: flex;    /** inicializa as propriedades flex-box */
+        align-items: center;  /** alinhamento ao centro*/
+    flex-direction: column;   /** tipo de alinhamento*/
+            }
+            h1{  /** nivel de titulo h1 ate h6 */
+                font-size: 40px;     /** tamanho da fonte */
+                font-weight: 900;    /** espessura da fonte */
+                color: blueviolet; /** cor da fonte do texto */
+            }
+            form{  /** corpo do formulario */
+                margin-bottom: 20px;  /** espaçamento externo parte de baixo */
+            }
+            input{  /** campomusado para digitar o texto */
+                padding: 10px; 
+            }
+            .inputtext{  /**  classe usada para fazer estilizaçoes */
+
+            }
+            input, button{  /**  ???  */
+            padding: 10px;        /** espaçamento interno */
+            border: none;         /** tirar as bordas */
+            outline: none;        /** tirar as bordas quqando é clicado */
+            border-radius: 7px;   /** arredondamento das bordas */
+            background-color: bisque; /** cor do fundo do elemento */
+            }
+            button{
+                cursor: pointer;    /** ewspaçamento da maozinha */
+                width: 100px;       /** largura */
+                color: white;     /** cor da fonte*/
+                font-size: 15px;    /** tamanho da fonte do texto */
+                background-color: blueviolet;  /** cor do fundo do elemento */
+            }
+        </style>
+
 </body>
 </html>
