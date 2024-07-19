@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio buscar</title>
+</head>
+<body>
+
+    <h1>buscar</h1>
+
+
+    <form>
+        <input type="text" id="input__Buscar" placeholder="buscar">
+        <button id="btn__buscar">buscar</button>
+    </form>
+
+    <script>
+        /** inicia o validar do buscar */
+        function validarBuscar(){
+
+            var buscar = document.querySelector("#input__buscar")
+
+            if( !buscar.value ){
+                alert("por favor preencher campo")
+                return false
+            }else{
+                alert( "digitando: " + buscar.value )
+            }
+
+            limparbuscar()
+
+        }
+
+        
+    </script>
+    
+</body>
+</html>
