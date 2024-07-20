@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt.pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>produto</title>
+    </head>
+  <body>
+    <h1>Cadastro de pessoa juridica</h1>
+
+    <form>
+        <input id="inputracao-social"  class="inputText" type="text" placeholder="razao-social">
+        <input id="inputendereço"      class="inputText" type="text" placeholder="endereço">
+        <input id="cidade"             class="inputText" type="text" placeholder="cidade">
+        <input id="telefone"           class="inputText" type="text" placeholder="telefone">
+        <input id="e-mail"             class="inputText" type="text" placeholder="e-mail">
+       
+        <button id="btn__produto">Inserir</button>
+    </form>
+
+    <h1> Dados pessoa fisica </h1>
+
+    <form > 
+        <input type="text" id="input__nome" placeholder="nome">
+        <input type="text" id="input__cpf"  placeholder="cpf">
+        <input type="text" id="input__RG"   placeholder="RG">
+        <input type="text" id="input__sexo" placeholder="sexo">
+        <input type="text" id="input__idade" placeholder="idade">
+
+        <button id="btn__buscar">buscar</button>
+    </form>
+
+    <script>
+        /** iniciar produto */
+  function validarProduto(){
+        /** recebendo valores do imput*/
+
+    var recaosocial   =document.querySelector("#inputracao-social").value 
+    var endereço      =document.querySelector("#inputendereço").value
+    var cidade        =document.querySelector("#inputcidade").value 
+    var telefone      =document.querySelector("#inputtelefone").value
+    var email         =document.querySelector("#inpute-mail").value 
+     
+        /** validar se os campos estao preenchidos */
+    if( !racao-social || !endereço || !cidade || !telefone || !e-mail ){
+        alert("preencher todos os campos")
+        return false
+    }else{
+       /** mostrar os valores em tela */
+       alert(
+      "racaosocial: " + raçao-social + " " +
+      "endereço: "    + endereço     + " " +
+      "cidade: "      + cidade       + " " +
+     "desconto: 10% " + telefone     + " " +
+     "email: "        + e-mail       + " " +
+    )
+    limparproduto()
+    }  
+}   
+    
+        document.querySelector("#btn__buscar")
+       .addEventListener("clik", (e) => {
+      e.preventDefault()
+       validarBuscar()
+                })
+
+          function limparbuscar(){
+          var buscar = document.querySelector("#input__buscar").value =""
+ }
+   
+    </script>
+
+<style>
+    /**
+    * tipos de seletores
+    ** elementos tag h1, h2, body, input, form, button
+    ** classes . button, .btn, .inputtext
+    ** id #button, #entra, #cadastrar, #nome, #email.
+    */
+    body{         /** body é o corpo do documento */
+        display: flex;             /** inicializa as propriedades flex box */
+        align-items: center;       /** alinhamento ao centro */
+        flex-direction: column;    /** tipo de alinhamentpo */
+    }
+    h1{           /** nivel de titulo de h1 ate h6 */
+        font-size: 40px;       /** tamanho da fonte */
+        font-weight: 900;      /** espaçamento da fonte */
+        color: black;   /** cor da fonte do texto */
+    }
+    form{       /** corpo do formulario */
+        margin-bottom: 20px; /** espaçamento externo parte de baixo */
+    }
+    input{      /** campo usado para digitar um texto*/
+        padding: 10px;
+    }
+    .inputtext{  /** classe usada para fazer estilizaçao */
+
+    }
+    input,button{
+        cursor: w-resize; /** adicionei maozinha */ 
+        padding: 10px;   /** espaçamento interno */
+        border: none;    /** tirar as bordas */
+        outline: none;   /** tirar as bordas quando é clicado */
+        border: 7px;     /** arrredondamentos das bordas */
+        background-color: rgb(75, 183, 219); /** cor do fubndo do elemento */
+    }
+    button{
+        cursor: pointer;    /** aparecer a maozinha */
+        width: 100px;       /** largura */
+        color: black;     /** cor da fonte */
+        font-size: 15px;    /** tamanho da fonte dpo texto */
+        background-color: green ; /** cor do fundo do elemento */
+    }
+</style>
+
+</body>
+</html>
+
